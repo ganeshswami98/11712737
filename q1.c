@@ -75,14 +75,14 @@ int findSafeState(int process,int resource,int *available,int allocation[3][3],i
                 }
             }
             else{
-                printf("Deadlock Is Present So Unable to Find The Safe sequence...");
+                printf("Could not find safe sequence...");
                 exit(1);
             }
             
             
             
         /*Calculation for need completed*/
-        printf("\n\n\t\t\t\t\t Deadlock Is Not Present So Finding Safe Sequence ....\n\n\n\t\t");
+        printf("\n\n\t\t\t\t\tFinding Safe sequence ....\n\n\n\t\t");
         while(completed<process)
         {
         for(i=0;i<process;i++)
@@ -113,7 +113,7 @@ int findSafeState(int process,int resource,int *available,int allocation[3][3],i
         }
         if (isFound == 0)
 		{
-			printf("Deadlock is There \nCould not get safe Sequence");
+			printf(" Could not get safe Sequence");
 			return -1;
 		}
         }
